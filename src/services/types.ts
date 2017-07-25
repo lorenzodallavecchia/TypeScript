@@ -28,8 +28,8 @@ namespace ts {
 
     export interface Symbol {
         getFlags(): SymbolFlags;
-        getName(): __String;
-        getUnescapedName(): string;
+        readonly name: string;
+        getName(): string;
         getDeclarations(): Declaration[] | undefined;
         getDocumentationComment(): SymbolDisplayPart[];
         getJsDocTags(): JSDocTagInfo[];
